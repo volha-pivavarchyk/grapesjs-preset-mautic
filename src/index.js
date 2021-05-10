@@ -18,14 +18,13 @@ export default (editor, opts = {}) => {
     deleteAssetConfirmText: 'Are you sure?',
     showLayersManager: 0,
     showImportButton: 0,
-    replaceRteWithFroala: true,
+    replaceRteWithCke: true,
     categorySectionLabel: 'Sections',
     categoryBlockLabel: 'Blocks',
     dynamicContentModalTitle: 'Edit Dynamic Content',
-    dynamicContentFroalaButtons: [
+    dynamicContentCkeButtons: [
       'undo',
       'redo',
-      '|',
       'bold',
       'italic',
       'underline',
@@ -68,7 +67,7 @@ export default (editor, opts = {}) => {
     },
   });
 
-  if (config.replaceRteWithFroala && typeof $.FroalaEditor !== 'undefined') {
+  if (config.replaceRteWithCke && typeof $.FroalaEditor !== 'undefined') {
     // Hiding other toolbars already created
     const rteToolbar = editor.RichTextEditor.getToolbarEl();
     [].forEach.call(rteToolbar.children, (child) => {
