@@ -150,4 +150,10 @@ export default class ContentService {
 
     return styles;
   }
+  static getEmailBuilderStyles() {
+    return [
+      'css/email-editor.css'
+    ];
+  }
+
 }
