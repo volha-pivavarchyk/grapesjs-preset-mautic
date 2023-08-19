@@ -72,7 +72,8 @@ export default class ButtonApplyCommand {
       if (response.route) {
         // update URL in address bar
         MauticVars.manualStateChange = false;
-        History.pushState(null, 'Mautic', response.route);
+        // eslint-disable-next-line no-restricted-globals
+        history.pushState(null, 'Mautic', response.route);
 
         // update Title
         Mautic.generatePageTitle(response.route);
