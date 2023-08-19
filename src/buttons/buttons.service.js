@@ -17,7 +17,7 @@ export default class ButtonService {
    */
   static getElementValue(elementId) {
     const field = document.getElementById(elementId);
-    console.log(field);
+
     if (!field) {
       throw new Error(`Element '${elementId}' not found`);
     }
@@ -32,6 +32,7 @@ export default class ButtonService {
    */
   static setElementValue(elementId, value) {
     const field = document.getElementById(elementId);
+
     if (!field) {
       throw new Error(`Element '${elementId}' not found`);
     }
